@@ -12,6 +12,10 @@
 cmake_minimum_required(VERSION 3.12...3.15 FATAL_ERROR)
 project (VTKm)
 
+# Timing for compilation
+set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "time -v")
+set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK "time -v")
+
 # We only allow c++14
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
