@@ -14,7 +14,7 @@ project (VTKm)
 
 # # Timing for compilation
 # set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "time -v")
-# set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK "time -v")
+set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK "time -v")
 
 # We only allow c++14
 set(CMAKE_CXX_STANDARD 14)
