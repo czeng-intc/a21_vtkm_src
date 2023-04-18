@@ -2524,8 +2524,9 @@ private:
     // a single atomic value.
     std::cout << "Testing Atomic Add with vtkm::Int32" << std::endl;
     {
+      std::vector<vtkm::Int32> vec{ 0 };
       vtkm::cont::ArrayHandle<vtkm::Int32> atomicElement =
-        vtkm::cont::make_ArrayHandle<vtkm::Int32>({ 0 });
+        vtkm::cont::make_ArrayHandle<vtkm::Int32>(vec, vtkm::CopyFlag::Off);
 
       vtkm::cont::AtomicArray<vtkm::Int32> atomic(atomicElement);
       {
@@ -2539,8 +2540,9 @@ private:
 
     std::cout << "Testing Atomic Add with vtkm::Int64" << std::endl;
     {
+      std::vector<vtkm::Int64> vec{ 0 };
       vtkm::cont::ArrayHandle<vtkm::Int64> atomicElement =
-        vtkm::cont::make_ArrayHandle<vtkm::Int64>({ 0 });
+        vtkm::cont::make_ArrayHandle<vtkm::Int64>(vec, vtkm::CopyFlag::Off);
 
       vtkm::cont::AtomicArray<vtkm::Int64> atomic(atomicElement);
       {
@@ -2554,8 +2556,9 @@ private:
 
     std::cout << "Testing Atomic CAS with vtkm::Int32" << std::endl;
     {
+      std::vector<vtkm::Int32> vec{ 0 };
       vtkm::cont::ArrayHandle<vtkm::Int32> atomicElement =
-        vtkm::cont::make_ArrayHandle<vtkm::Int32>({ 0 });
+        vtkm::cont::make_ArrayHandle<vtkm::Int32>(vec, vtkm::CopyFlag::Off);
 
       vtkm::cont::AtomicArray<vtkm::Int32> atomic(atomicElement);
       {
@@ -2569,8 +2572,9 @@ private:
 
     std::cout << "Testing Atomic CAS with vtkm::Int64" << std::endl;
     {
+      std::vector<vtkm::Int64> vec{ 0 };
       vtkm::cont::ArrayHandle<vtkm::Int64> atomicElement =
-        vtkm::cont::make_ArrayHandle<vtkm::Int64>({ 0 });
+        vtkm::cont::make_ArrayHandle<vtkm::Int64>(vec, vtkm::CopyFlag::Off);
 
       vtkm::cont::AtomicArray<vtkm::Int64> atomic(atomicElement);
       {
